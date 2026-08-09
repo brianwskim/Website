@@ -5,7 +5,6 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import url("fontawesome-all.min.css");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,600");
 
 /*
 	Prologue by HTML5 UP
@@ -108,7 +107,7 @@
 
 	body {
 		background: #fff;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
@@ -125,12 +124,12 @@
 	}
 
 	input, textarea, select {
-		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 19pt;
-		font-weight: 300;
-		line-height: 1.75em;
-		color: #888;
-	}
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 19pt;
+			font-weight: 300;
+			line-height: 1.75em;
+			color: #888;
+		}
 
 	h1, h2, h3, h4, h5, h6 {
 		font-weight: 300;

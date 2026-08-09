@@ -114,15 +114,18 @@
 
 							<p>As just one human, the most valuable thing I can offer is my time and attention. My inbox is open.</p>
 
-							<form method="post" action="#">
+							<form id="contact-form" method="post" action="#">
 								<div class="row">
-									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile"><input type="text" name="email" placeholder="Email" /></div>
-									<div class="col-12">
-										<textarea name="message" placeholder="Message"></textarea>
+									<div class="col-6 col-12-mobile"><input id="contact-name" type="text" name="name" placeholder="Name" /></div>
+									<div class="col-6 col-12-mobile">
+										<input id="contact-email" type="email" name="email" placeholder="Email" />
+										<span id="email-error" style="color:#c00;display:none;font-size:0.9em;margin-left:0.25em;">Email is required.</span>
 									</div>
 									<div class="col-12">
-										<input type="submit" value="Send Message" />
+										<textarea id="contact-message" name="message" placeholder="Message"></textarea>
+									</div>
+									<div class="col-12">
+										<input id="send-button" type="submit" value="Send Message" />
 									</div>
 								</div>
 							</form>
