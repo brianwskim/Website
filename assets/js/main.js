@@ -97,38 +97,6 @@
     // Scrolly.
         $('.scrolly').scrolly();
 
-    // Blog popup.
-        var blogPopupScrollTop = 0;
-
-        function openBlogPopup() {
-            blogPopupScrollTop = window.scrollY || window.pageYOffset;
-            document.body.classList.add('blog-popup-active');
-            document.body.style.top = '-' + blogPopupScrollTop + 'px';
-            $('#blog-popup').addClass('active');
-        }
-
-        function closeBlogPopup() {
-            document.body.classList.remove('blog-popup-active');
-            $('#blog-popup').removeClass('active');
-            document.body.style.top = '';
-            window.scrollTo(0, blogPopupScrollTop);
-        }
-
-        $(document).on('click', '#blog-link, #open-blog-popup', function(e) {
-            e.preventDefault();
-            openBlogPopup();
-        });
-
-        $(document).on('click', '#blog-popup-close, #blog-popup-overlay', function() {
-            closeBlogPopup();
-        });
-
-        $(document).on('keydown', function(e) {
-            if (e.key === 'Escape' && $('#blog-popup').hasClass('active')) {
-                closeBlogPopup();
-            }
-        });
-
     // Header (narrower + mobile).
 
         // Toggle.
@@ -151,25 +119,5 @@
                     target: $body,
                     visibleClass: 'header-visible'
                 });
-
-    // Contact form handler: validate email and open mailto to briankim.wk@gmail.com
-        $(document).on('submit', '#contact-form', function(e) {
-            e.preventDefault();
-            var $email = $('#contact-email');
-            var emailVal = $.trim($email.val());
-            if (!emailVal) {
-                $('#email-error').text('Email is required.').css('color', '#c00').show();
-                $email.focus();
-                return;
-            }
-            $('#email-error').hide();
-
-            var name = $.trim($('#contact-name').val());
-            var message = $.trim($('#contact-message').val());
-            var subject = 'Website message from ' + (name || 'Anonymous');
-            var body = 'Name: ' + (name || '') + '\n\n' + (message || '');
-            var mailto = 'mailto:briankim.wk@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-            window.location.href = mailto;
-        });
 
 })(jQuery);
