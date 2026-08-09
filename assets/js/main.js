@@ -97,6 +97,38 @@
     // Scrolly.
         $('.scrolly').scrolly();
 
+    // Blog popup.
+        var blogPopupScrollTop = 0;
+
+        function openBlogPopup() {
+            blogPopupScrollTop = window.scrollY || window.pageYOffset;
+            document.body.classList.add('blog-popup-active');
+            document.body.style.top = '-' + blogPopupScrollTop + 'px';
+            $('#blog-popup').addClass('active');
+        }
+
+        function closeBlogPopup() {
+            document.body.classList.remove('blog-popup-active');
+            $('#blog-popup').removeClass('active');
+            document.body.style.top = '';
+            window.scrollTo(0, blogPopupScrollTop);
+        }
+
+        $(document).on('click', '#blog-link, #open-blog-popup', function(e) {
+            e.preventDefault();
+            openBlogPopup();
+        });
+
+        $(document).on('click', '#blog-popup-close, #blog-popup-overlay', function() {
+            closeBlogPopup();
+        });
+
+        $(document).on('keydown', function(e) {
+            if (e.key === 'Escape' && $('#blog-popup').hasClass('active')) {
+                closeBlogPopup();
+            }
+        });
+
     // Header (narrower + mobile).
 
         // Toggle.

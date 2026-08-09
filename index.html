@@ -31,9 +31,8 @@
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
 								<li><a href="#latest" id="latest-link"><span class="icon solid fa-th">Latest</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-						<li><a href="#blog" id="blog-link"><span class="icon solid fa-book">Blog</span></a></li>
-								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
-							</ul>
+								<li><a href="#" id="blog-link"><span class="icon solid fa-book">Blog</span></a></li>
+									</ul>
 						</nav>
 
 				</div>
@@ -111,60 +110,39 @@
 								<h2>Blog</h2>
 							</header>
 
-						<p>Highlighted posts are shown first, followed by the rest of the archive in reverse chronological order.</p>
-
-						<h3>Highlights</h3>
-						<div class="blog-highlights">
-							<p><a href="blog/article1.html">TBC</a></p>
-							<p><a href="blog/article2.html">TBC</a></p>
-							<p><a href="blog/article3.html">TBC</a></p>
-						</div>
-
-						<h3>More Articles</h3>
-						<div class="blog-more-articles">
-							<p><a href="blog/article4.html">TBC</a></p>
-							<p><a href="blog/article5.html">TBC</a></p>
-							<p><a href="blog/article6.html">TBC</a></p>
-							<p><a href="blog/article7.html">TBC</a></p>
-						</div>
-
-							<header>
-								<h2>Contact</h2>
-							</header>
-
-							<p>As just one human, the most valuable thing I can offer is my time and attention. My inbox is open.</p>
-
-							<form id="contact-form" method="post" action="#">
-								<div class="row">
-									<div class="col-6 col-12-mobile"><input id="contact-name" type="text" name="name" placeholder="Name" /></div>
-									<div class="col-6 col-12-mobile">
-										<input id="contact-email" type="email" name="email" placeholder="Email" />
-										<span id="email-error" style="color:#c00;display:none;font-size:0.9em;margin-left:0.25em;">Email is required.</span>
-									</div>
-									<div class="col-12">
-										<textarea id="contact-message" name="message" placeholder="Message"></textarea>
-									</div>
-									<div class="col-12">
-										<input id="send-button" type="submit" value="Send Message" />
-									</div>
-								</div>
-							</form>
+							<div class="blog-popup-teaser">
+								<p>Explore featured writing and the rest of the archive without leaving the page.</p>
+								<a href="#" id="open-blog-popup" class="button">Open Blog</a>
+							</div>
 
 						</div>
 					</section>
 
+						<div id="blog-popup" class="blog-popup">
+							<div class="blog-popup-overlay" id="blog-popup-overlay"></div>
+							<div class="blog-popup-inner">
+								<button id="blog-popup-close" class="blog-popup-close">×</button>
+								<h2>Blog</h2>
+								<div class="blog-featured">
+									<p><a href="blog/article1.html">Reflections on Simplicity</a></p>
+									<p><a href="blog/article2.html">A Short Note on Habit</a></p>
+									<p><a href="blog/article3.html">On Making Space</a></p>
+								</div>
+								<div class="blog-archive">
+									<p><a href="blog/article4.html">What I Learned from a Quiet Weekend</a></p>
+									<p><a href="blog/article5.html">The Value of Small Decisions</a></p>
+									<p><a href="blog/article6.html">A Note on Rest and Work</a></p>
+									<p><a href="blog/article7.html">Why I Keep a Daily List</a></p>
+								</div>
+							</div>
+						</div>
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; Brian Kim. All rights reserved.</li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
 			</div>
-
-		<!-- Footer -->
-			<div id="footer">
-
-				<!-- Copyright -->
-					<ul class="copyright">
-						<li>&copy; Brian Kim. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-			</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

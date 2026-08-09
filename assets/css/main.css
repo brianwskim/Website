@@ -2574,7 +2574,104 @@ input, select, textarea {
 
 	}
 
-/* Mobile */
+/* Blog popup */
+
+    .blog-popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 10000;
+        pointer-events: none;
+    }
+
+        .blog-popup.active {
+            display: block;
+            pointer-events: auto;
+        }
+
+        .blog-popup-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+        }
+
+        .blog-popup-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 900px;
+            width: min(calc(100% - 3rem), 900px);
+            max-height: 80vh;
+            overflow: hidden;
+            border-radius: 1.25rem;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 120px rgba(0, 0, 0, 0.55);
+            padding: 2rem;
+        }
+
+            .blog-popup-inner h2 {
+                margin: 0 0 1rem 0;
+                color: #fff;
+            }
+
+            .blog-popup-close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                border: 0;
+                background: transparent;
+                color: #D8C6A1;
+                font-size: 2rem;
+                line-height: 1;
+                cursor: pointer;
+                transition: color 0.25s ease;
+            }
+
+                .blog-popup-close:hover {
+                    color: #fff;
+                }
+
+            .blog-featured,
+            .blog-archive {
+                margin-top: 1rem;
+                color: #ddd;
+            }
+
+            .blog-featured p,
+            .blog-archive p {
+                margin: 0 0 0.9rem 0;
+                line-height: 1.5;
+            }
+
+            .blog-featured p a,
+            .blog-archive p a {
+                color: #D8C6A1;
+                text-decoration: none;
+                border-bottom: 1px dotted rgba(216, 198, 161, 0.6);
+            }
+
+                .blog-featured p a:hover,
+                .blog-archive p a:hover {
+                    color: #fff;
+                }
+
+            .blog-archive {
+                max-height: 40vh;
+                overflow-y: auto;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+    body.blog-popup-active {
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+    }
 
 	@media screen and (max-width: 736px) {
 
